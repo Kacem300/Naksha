@@ -1,0 +1,47 @@
+
+ .tab2{
+
+    margin-top: 15%;
+    margin-right: 8%;
+    width: 600px;
+    height: 150px;
+    padding: 10px;
+ }
+
+ .td2{
+
+    background-color:rgba(11,64,39,255) ;
+    margin-left: auto;
+    margin-top: 20%;
+    margin-bottom: 0%;
+    padding: 5%;
+    border: 1px solid black;
+    font-size:x-large;
+    color: aliceblue;
+}
+
+
+      .column {
+        float: left;
+        width: 50%;
+        padding: 0px;
+      }
+
+      img{
+        width: 500px;
+        height: 350px;
+        margin-top: 10%;
+        margin-left: 0.5%;
+
+      }
+      footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: rgba(245,179,30,255);
+        color: white;
+        text-align: center;
+        margin-top: 0%;
+     }
+

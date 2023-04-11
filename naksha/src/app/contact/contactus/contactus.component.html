@@ -1,0 +1,28 @@
+
+
+
+<div class="container">
+  <form [formGroup]="addUserForm" (ngSubmit)="usercontact()">
+  <div class="form-group row" >
+    <label for="email" class="col-sm-2 col-form-label">Email</label>
+    <div class="col-sm-10" >
+      <input type="email" class="form-control" matInput placeholder="email" formControlName="email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" required>
+    </div>
+    <br>
+    <br>
+    <label for="textarea" class="col-sm-2 col-form-label">message</label>
+    <div class="col-sm-10" >
+      <textarea type="textarea" class="form-control" matInput placeholder="message" formControlName="message"></textarea>
+    </div>
+    <div class="col-sm-10 offset-sm-2" >
+      <button class="btn btn-primary" [disabled]="!addUserForm.valid" mat-raised-button type="submit" (click)="show=true">Send</button>
+  </div>
+</div>
+  <br>
+<div class="alert alert-success" role="alert" *ngIf="show"><strong>Well done!</strong> Your Message is Successfully Send</div>
+</form>
+</div>
+
+
+
+

@@ -1,0 +1,49 @@
+<div class="container">
+<div class="cartBox">
+  <h1 class="fw-normal mb-0 text-black">Shopping Cart</h1>
+<div class="headCart">
+  <p class="lead">You have <label class="text-danger "> {{cartproducts.length}}</label> item in your cart</p>
+  <span class="fw-normal mb-0 text-black card-header" (click)="clearcart()" >Clear Shopping Cart</span>
+</div>
+  <table class="table table-striped">
+      <thead>
+          <tr >
+              <th></th>
+              <th>Name</th>
+              <th>Price</th>
+              <th style="width: 25%;">Quantity</th>
+              <th>Totle</th>
+              <th></th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let carts of cartproducts">
+              <td><img src="{{carts.item.img}}" alt=""></td>
+              <td>{{carts.item.title}}</td>
+              <td>{{carts.item.price}} TD</td>
+              <td>
+                  <div class="quantity">
+                      <input class="form-control" type="number" (change)="addnumber()" [(ngModel)]="carts.quantity" min="1">
+                  </div>
+              </td>
+              <td>{{carts.item.price * carts.quantity}}</td>
+              <td>
+                  <button class="btn btn-danger" (click)="deletecart(0)" >Delete</button>
+              </td>
+          </tr>
+      </tbody>
+      <tfoot>
+          <tr>
+              <th></th>
+              <th></th>
+              <th></th>
+              <th></th>
+              <th>{{this.total}}</th>
+              <th><button class="btn btn-success" (click)="show=true" (click)="addCart()">Order Now</button></th>
+          </tr>
+      </tfoot>
+  </table>
+
+</div>
+<div class="alert alert-success" role="alert" *ngIf="show"><strong>Well done!</strong> Your Order is Successfully Send</div>
+</div>
